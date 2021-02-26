@@ -120,6 +120,10 @@
               "devServerTarget": "random-lenny-face:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
