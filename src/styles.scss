@@ -8,5 +8,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(252, 252, 252);
+  background-color: #212121;
+  color: #efefef;
+  font-family: 'OpenSans-Regular';
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url('assets/OpenSans-Regular.ttf') format("opentype");
 }
