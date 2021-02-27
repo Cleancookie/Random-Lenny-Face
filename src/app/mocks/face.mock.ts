@@ -1,4 +1,4 @@
-export const faces: string[] = [
+export const FACES: string[] = [
   "( ͡° ͜ʖ ͡°)",
   "( ͠° ͟ʖ ͡°)",
   "ᕦ( ͡° ͜ʖ ͡°)",

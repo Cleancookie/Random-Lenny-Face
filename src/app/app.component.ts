@@ -1,4 +1,5 @@
-import { faces } from './mocks/lenny.mock';
+import { PARTS } from './mocks/parts.mock';
+import { FACES } from './mocks/face.mock';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,11 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'random-lenny-face';
-
   face: any = '';
 
   constructor() {
-    this.face = faces[Math.floor(Math.random() * faces.length)];
+    let mouth = this.getRandom(PARTS.mouths);
+    let eyes = this.getRandom(PARTS.eyes);
+    let ears = this.getRandom(PARTS.ears);
+
+    this.face = `${ears.left}${eyes.left}${mouth}${eyes.right}${ears.right}`;
+    this.face = this.getRandom(FACES);
+  }
+
+  getRandom(options: Array<any>) {
+    return options[Math.floor(Math.random() * options.length)];
   }
 }
